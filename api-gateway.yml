@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      uri: http://localhost:9020
+zuul:
+  prefix: /api
+  routes:
+    user-service:
+      path: /user-service/**
+      service-id: user-service
+    task-service:
+      path: /task-service/**
+      service-id: task-service
+eureka:
+  client:
+    service-url: http://localhost:8761/eureka
