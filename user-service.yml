@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:9000/bootUser?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    platform: mysql
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8082
+#Eureka
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
