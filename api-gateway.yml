@@ -13,10 +13,10 @@ zuul:
     task-service:
       path: /task-service/**
       service-id: task-service
-# eureka:
-#   client:
-#     service-url:
-#       default-zone: http://sahil:sahil@localhost:8761/eureka/
+eureka:
+  client:
+    service-url:
+      default-zone: http://sahil:sahil@localhost:8761/eureka/
 
 logging:
   file:
